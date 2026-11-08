@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     )
 
     # ----- 应用 -----
-    app_name: str = "rag-backend"
+    app_name: str = "nexora-agent-backend"
     app_version: str = "0.1.0"
     app_env: str = "dev"
     debug: bool = True
@@ -31,10 +31,10 @@ class Settings(BaseSettings):
 
     # ----- 数据库 -----
     mysql_dsn: str = (
-        "mysql+aiomysql://root:root@127.0.0.1:3306/nexus_agent?charset=utf8mb4"
+        "mysql+aiomysql://root:root@127.0.0.1:3306/nexora_agent?charset=utf8mb4"
     )
     pg_dsn: str = (
-        "postgresql+asyncpg://postgres:postgres@127.0.0.1:5432/nexus_agent_pgvector"
+        "postgresql+asyncpg://postgres:postgres@127.0.0.1:5432/nexora_agent_pgvector"
     )
 
     # ----- Redis -----
@@ -42,24 +42,24 @@ class Settings(BaseSettings):
 
     # ----- Kafka -----
     kafka_bootstrap_servers: str = "127.0.0.1:9092"
-    kafka_group_id: str = "nexus-agent-document-manage"
-    kafka_parse_topic: str = "nexus-agent-document-parse-route"
-    kafka_index_topic: str = "nexus-agent-document-index-build"
+    kafka_group_id: str = "nexora-agent-document-manage"
+    kafka_parse_topic: str = "nexora-agent-document-parse-route"
+    kafka_index_topic: str = "nexora-agent-document-index-build"
 
     # ----- MinIO -----
     minio_endpoint: str = "127.0.0.1:9000"
     minio_access_key: str = "minioadmin"
     minio_secret_key: str = "minioadmin"
-    minio_bucket: str = "nexus-agent-document"
+    minio_bucket: str = "nexora-agent-document"
     minio_secure: bool = False
 
     # ----- Elasticsearch -----
     elasticsearch_urls: str = "http://127.0.0.1:9200"
     elasticsearch_username: str = "elastic"
     elasticsearch_password: str = "elastic"
-    elasticsearch_keyword_index: str = "nexus-agent-document-keyword"
-    elasticsearch_navigation_index: str = "nexus-agent-document-navigation"
-    elasticsearch_route_index: str = "nexus-agent-knowledge-route"
+    elasticsearch_keyword_index: str = "nexora-agent-document-keyword"
+    elasticsearch_navigation_index: str = "nexora-agent-document-navigation"
+    elasticsearch_route_index: str = "nexora-agent-knowledge-route"
 
     # ----- Neo4j -----
     neo4j_uri: str = "bolt://127.0.0.1:7687"
